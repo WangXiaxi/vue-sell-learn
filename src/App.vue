@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <v-header></v-header>
+  <div id="app">
+    <div class="header-box">
+      <v-header></v-header>
+    </div>
     <div class="tab border-1px">
       <div class="tab-item">
         <router-link :to="{path:'/goods'}">商品</router-link>
@@ -12,22 +14,36 @@
         <router-link :to="{path:'/seller'}">商家</router-link>
       </div>
     </div>
-    <router-view></router-view>
+    <div class="view-box">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
 import vHeader from '@/components/header/header'
 export default {
+  name: 'App',
   components: {
     vHeader
   }
 }
 </script>
-
 <style lang="stylus" rel="stylesheet/stylus">
+  html,body
+    height: 100%
+    width: 100%
+</style>
+<style lang="stylus" scoped rel="stylesheet/stylus">
   @import "./common/stylus/mixin.styl"
-
+  #app
+    display: flex
+    width: 100%
+    height: 100%
+    position: relative
+    flex-direction: column
+    .header-box
+      position: relative
   .tab
     display: flex
     width: 100%
@@ -44,4 +60,8 @@ export default {
         color: rgb(77, 85, 93)
         &.active
           color: rgb(240, 20, 20)
+  .view-box
+    flex: 1
+    background: red
 </style>
+

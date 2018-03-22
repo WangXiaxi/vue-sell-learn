@@ -15,7 +15,7 @@
       </div>
       <div class="header-adv"><i class="tip"></i><span>粥品香坊其烹饪粥料的秘方源于中国千年古法，在融和现代制作工艺，由世界烹饪大师屈浩先生领衔研发。坚守纯天然、0添加的良心品质深得消费者青睐，发展至今成为粥类的引领品牌。是2008年奥运会和2013年园博会指定餐饮服务商。</span><i class="icon-keyboard_arrow_right"></i></div>
     </div>
-    <div v-show="true" class="fix-box" @touchmove.prevent>
+    <div v-show="false" class="fix-box" @touchmove.prevent>
       <div class="big-tit">粥品稥坊（回龙观）</div>
       <div class="star">
         <div class="item"></div>
@@ -24,17 +24,19 @@
         <div class="item"></div>
         <div class="item"></div>
       </div>
-      <div class="scroll-box">
-        <div class="sale-tit tit">优惠信息</div>
-        <ul class="sale-ul">
-          <li><i class="decrease_1"></i><span>在线支付满28减5</span></li>
-          <li><i class="discount_1"></i><span>该商家支持发票,请下单写好发票抬头</span></li>
-          <li><i class="guarantee_1"></i><span>VC无限橙果汁全场8折</span></li>
-          <li><i class="invoice_1"></i><span>单人精彩套餐</span></li>
-          <li><i class="special_1"></i><span>已加入“外卖保”计划,食品安全保障</span></li>
-        </ul>
-        <div class="adv-tit tit">商家公告</div>
-        <div class="adv-content">粥品香坊其烹饪粥料的秘方源于中国千年古法，在融和现代制作工艺，由世界烹饪大师屈浩先生领衔研发。坚守纯天然、0添加的良心品质深得消费者青睐，发展至今成为粥类的引领品牌。是2008年奥运会和2013年园博会指定餐饮服务商。</div>
+      <div class="scroll-box" @touchmove.stop>
+        <div class="scroll-box-s">
+          <div class="sale-tit tit">优惠信息</div>
+          <ul class="sale-ul">
+            <li><i class="decrease_1"></i><span>在线支付满28减5</span></li>
+            <li><i class="discount_1"></i><span>该商家支持发票,请下单写好发票抬头</span></li>
+            <li><i class="guarantee_1"></i><span>VC无限橙果汁全场8折</span></li>
+            <li><i class="invoice_1"></i><span>单人精彩套餐</span></li>
+            <li><i class="special_1"></i><span>已加入“外卖保”计划,食品安全保障</span></li>
+          </ul>
+          <div class="adv-tit tit">商家公告</div>
+          <div class="adv-content">粥品香坊其烹饪粥料的秘方源于中国千年古法，在融和现代制作工艺，由世界烹饪大师屈浩先生领衔研发。坚守纯天然、0添加的良心品质深得消费者青睐，发展至今成为粥类的引领品牌。是2008年奥运会和2013年园博会指定餐饮服务商。</div>
+        </div>
       </div>
       <div class="close-box">
         <i class="icon-close"></i>
@@ -168,6 +170,7 @@
         margin-top: 18px
         font-size: 0
         text-align: center
+        padding-top: 2px
         .item
           width: 20px
           height: 20px
@@ -183,6 +186,14 @@
         right: 10%
         left: 10%
         text-align: center
+        overflow: hidden
+        .scroll-box-s
+          width: calc(100% + 200px)
+          padding-right: 200px
+          height: 100%
+          overflow: hidden
+          overflow-y: scroll
+          -webkit-overflow-scrolling: touch
         .tit
           display: inline-block
           font-size: 14px
@@ -194,10 +205,25 @@
             content: ''
           &:after
             content: ''
+          &.sale-tit
+            margin-top: 10px
         .sale-ul
           text-align: left
+          li
+            margin-bottom: 12px
+            i
+              display: inline-block
+              width: 16px
+              height: 16px
+              background-size: 100% auto
+              background-repeat: no-repeat
+              vertical-align: middle
+            span
+              vertical-align: middle
+              margin-left: 4px
         .adv-content
           text-align: left
+          line-height: 2
       .close-box
         position: absolute
         width: 32px
