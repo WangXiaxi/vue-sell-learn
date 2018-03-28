@@ -8,17 +8,25 @@ Vue.use(Router)
 
 export default new Router({
   linkActiveClass: 'active',
-  routes: [{
-    path: '/',
-    redirect: '/goods'
-  }, {
-    path: '/goods',
-    component: goods
-  }, {
-    path: '/ratings',
-    component: ratings
-  }, {
-    path: '/seller',
-    component: seller
-  }]
+  routes: [
+    {
+      path: '/',
+      redirect: '/goods'
+    },
+    {
+      path: '/goods',
+      component: goods,
+      meta: {
+        showCart: true // 需要被缓存
+      }
+    },
+    {
+      path: '/ratings',
+      component: ratings
+    },
+    {
+      path: '/seller',
+      component: seller
+    }
+  ]
 })

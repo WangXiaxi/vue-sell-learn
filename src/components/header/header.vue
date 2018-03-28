@@ -4,7 +4,7 @@
       <div class="blur-bg"></div>
       <div class="header-info">
         <div class="image-box">
-          <img src="http://static.galileo.xiaojukeji.com/static/tms/seller_avatar_256px.jpg">
+          <img src="http://fuss10.elemecdn.com/c/cd/c12745ed8a5171e13b427dbc39401jpeg.jpeg?imageView2/1/w/114/h/114">
         </div>
         <div class="text-box">
           <h2 class="tit"><i></i><span>粥品稥坊（回龙观）</span></h2>
@@ -64,7 +64,7 @@
         left: 0
         right: 0
         bottom: 0
-        background: url('http://static.galileo.xiaojukeji.com/static/tms/seller_avatar_256px.jpg') center center no-repeat
+        background: url('http://fuss10.elemecdn.com/c/cd/c12745ed8a5171e13b427dbc39401jpeg.jpeg?imageView2/1/w/114/h/114') center center no-repeat
         background-size: 100% auto
         filter: blur(10px)
       .header-info

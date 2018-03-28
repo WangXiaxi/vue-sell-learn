@@ -17,15 +17,23 @@
     <div class="view-box">
       <router-view></router-view>
     </div>
+    <div class="cart-box" v-if="$route.meta.showCart">
+      <v-cart></v-cart>
+    </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
 import vHeader from '@/components/header/header'
+import vCart from '@/components/cart/cart'
 export default {
   name: 'App',
   components: {
-    vHeader
+    vHeader,
+    vCart
+  },
+  mounted () {
+    console.log(this.$route.meta.showCart)
   }
 }
 </script>
@@ -62,6 +70,8 @@ export default {
           color: rgb(240, 20, 20)
   .view-box
     flex: 1
-    background: red
+    position: relative
+    overflow: hidden
+  .cart-box
+    height: 48px
 </style>
-
