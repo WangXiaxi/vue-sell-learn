@@ -1,6 +1,9 @@
 <template>
   <div class="seller">
-    seller
+    <div class="seller-top">
+    	
+    </div>
+    <div class="split"><!-- 占位 --></div>
   </div>
 </template>
 <script type="text/ecmascript-6">
